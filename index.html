@@ -1,0 +1,47 @@
+<html>
+    <head><title>Family Book</title></head>
+    <body>
+        <center>
+            <h1 id="456">My Family Book</h1>
+            <img style="min-height: 100px; max-height: 460; min-width: 100px; max-width: 500;" src="download.jpg" id="Family">
+            <br>
+            <br>
+            <h2 id="family_text"></h2>
+            <button id="321" onclick="next()">Next Family Member</button>
+        </center>
+        <script>
+            var pics_array=[
+            "download.jpg",
+            "1st picture.jpg",
+            "Second picture Edit.jpg"];
+
+            var text_array=[
+            "Me and My Sister Anaya",
+            "My Mom Hema and My Dad Yogesh",
+            "My Family Book"
+            ];
+
+            var o = 1;
+            var y = 0;
+
+            function next() { 
+
+                if(o == 3) {
+                o=0;
+                document.getElementById("456").style.display = "none";
+                };
+
+                document.getElementById("Family").src = pics_array[o];
+                o++;
+
+                if(y == 3){
+                y=0; 
+                }; 
+ 
+                document.getElementById("family_text").innerHTML=text_array[y]; 
+                y++;
+
+            };
+        </script>
+    </body>
+</html>
